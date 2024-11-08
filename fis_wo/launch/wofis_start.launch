@@ -1,0 +1,5 @@
+<launch>
+    <node name="fis_wo_node" pkg="fis_wo" type="fis_wo.py" output="screen" />
+    <!-- <node name="fis_wo_node" pkg="fis_wo" type="fis_wo.py" launch-prefix="xterm -e python -m pdb " output="screen"/> -->
+
+</launch>

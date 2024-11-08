@@ -1,0 +1,2 @@
+int32 keypoint_num
+float32 repro_error

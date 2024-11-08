@@ -1,0 +1,7 @@
+<launch>
+    
+    <node name="orbdata_construct_node" pkg="fis_vo" type="orbdata_construct_node" output="screen" />
+
+    <node name="fis_vo_node" pkg="fis_vo" type="fis_vo_node.py" output="screen" />
+
+</launch>
