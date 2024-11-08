@@ -1,0 +1,7 @@
+<launch>
+      <node pkg="rosbag" type="play" name="rosbag" args="-d 2 /home/wheeltec/2024-10-22-16-44-13.bag"/>
+      <node name="extract" pkg="image_view" type="extract_images" respawn="false" output="screen" cwd="ROS_HOME">
+      <remap from="image" to="/orb_slam2_rgbd/debug_image"/>
+      <param name="sec_per_frame" value="0.03"/>
+      </node>
+ </launch>

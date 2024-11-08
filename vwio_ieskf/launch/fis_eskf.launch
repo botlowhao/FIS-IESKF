@@ -1,0 +1,5 @@
+<launch>
+    <include file="$(find fis_wo)/launch/wofis_start.launch" />
+    <include file="$(find vwio_eskf)/launch/visual_imu_odom_eskf_localization.launch"/>
+
+</launch>

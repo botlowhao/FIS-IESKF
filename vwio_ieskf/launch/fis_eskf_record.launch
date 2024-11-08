@@ -1,0 +1,11 @@
+<launch>
+  <!-- 启动wo_record节点并录制里程计话题 -->
+  <node name="odometry_record" pkg="rosbag" type="record" args="-O /home/wheeltec/SCI_Experiment/No_Glass/No_Glass.bag /state_pose /wo_sync /wo_pose /wio_pose" output="screen"/>
+
+
+  <include file="$(find vwio_eskf)/launch/fis_eskf.launch"/>
+
+</launch>
+
+
+

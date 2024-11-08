@@ -1,0 +1,17 @@
+<launch>
+    <!-- tf satic -->
+    <!-- <node pkg="tf" type="static_transform_publisher" name="map_to_odom" args="0 0 0 0 0 0 map odom 100" /> -->
+
+    <node pkg="tf" type="static_transform_publisher" name="base_link_to_base_footprint" 
+          args="0 0 0 0 0 0 base_link base_footprint 100" />    
+
+    <!-- launch the eskf_localization node  -->
+    <node pkg="vwio_eskf" name="eskf_localization" type="eskf_localization" output="screen"/>
+
+    <node pkg="rosbag" type="play" name="player" output="screen"
+        args="--clock --bags /home/wheeltec/fiseskf_ws/src/vwio_eskf/dataset/fis_ieskf_20241019/ieskf_synced_20241019_noorb2.bag"/>    
+
+    <!--display rviz-->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find vwio_eskf)/rviz/vwio_eskf_localization.rviz" required="true"/>
+
+</launch>
