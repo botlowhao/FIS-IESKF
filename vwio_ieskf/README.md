@@ -10,8 +10,7 @@ ROS1 Package Using ESKF/IESKF Method for Muti-Sensor Fusion(Wheel Odometry, Iner
 - [x] Construct **Wheel Odometry Fuzzy Inference System**(WOFIS) with another ROS Package [fis_wo](https://github.com/botlowhao/fis_wo).
   - [x] Custom define ROS data type(vwio_eskf::WOFISData) to send **ros_wofisdata**(including Wheel Velocity Difference and Z-Axies Angular Velocity) by robot's linear and angular velocity.
   - [x] Custom define ROS data type(vwio_eskf::Q1Data) to receive **custom_q1_data** which is used to adjust the Process Covariance Matrix dynamically.
-### Functionality to be completed
-- [ ] Construct **Visual Odometry Fuzzy Inference System** by Number of Feature Points and Reprojection Error from ORB features.
+- [x] Construct **Visual Odometry Fuzzy Inference System** by Number of Feature Points and Reprojection Error from ORB features.
 
 ## Develop Environment
 OS:
